@@ -127,6 +127,12 @@
   (let [[bottom-left top-left _ top-right] unit-square-vectors]
     (transform-painter painter top-left top-right bottom-left)))
 
+(defn flip-horiz
+  "Returns a painter flipped horizontally"
+  [painter]
+  (let [[bottom-left _ bottom-right top-right] unit-square-vectors]
+    (transform-painter painter bottom-right bottom-left top-right)))
+
 (defn shrink-to-upper-right
   "Transforms the given painter to paint images shrunk to the first quadrant of
   the original frame"
@@ -142,6 +148,18 @@
   [painter]
   (let [[bottom-left _ bottom-right top-right] unit-square-vectors]
     (transform-painter painter bottom-right top-right bottom-left)))
+
+(defn rotate180
+  "Transforms the given painter to paint images rotated 180-degrees
+  counterclockwise"
+  [painter]
+  (-> painter rotate90 rotate90))
+
+(defn rotate270
+  "Transforms the given painter to paint images rotated 270-degrees
+  counterclockwise"
+  [painter]
+  (-> painter rotate180 rotate90))
 
 (defn squash-inwards
   "Transforms the painter to paint in the middle-third of the original frame"
@@ -162,4 +180,10 @@
     (fn [frame]
       (paint-left frame)
       (paint-right frame))))
+
+(defn below
+  "Returns a compound painter which arranges two painters to paint one above
+  the other"
+  [painter1 painter2]
+  (rotate90 (beside painter1 painter2)))
 
