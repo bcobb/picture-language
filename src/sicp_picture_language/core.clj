@@ -65,3 +65,49 @@
                                     (edge1-frame frame))
                         (scale-vect (ycor-vect v)
                                     (edge2-frame frame))))))
+
+(defn make-segment
+  "Creates a line segment from two vectors"
+  [v w]
+  [v w])
+
+(defn start-segment
+  "Returns the start of the given segment"
+  [segment]
+  (first segment))
+
+(defn end-segment
+  "Returns the end of the given segment"
+  [segment]
+  (second segment))
+
+(defn segments-painter
+  "Returns a function that paints (in some sense) the given segments into the
+  given frame"
+  [segments]
+  (fn [frame]
+    (map (fn [segment] (make-segment ((frame-coord-map frame) (start-segment segment))
+                                     ((frame-coord-map frame) (end-segment segment))))
+         segments)))
+
+(def unit-square-vectors
+  (map (partial apply make-vect)
+       (for [x (range 0 2) y (range 0 2)] [x y])))
+
+(def frame-outline-painter
+  (let [[bottom-left top-left bottom-right top-right] unit-square-vectors]
+    (segments-painter [(make-segment bottom-left bottom-right)
+                       (make-segment bottom-right top-right)
+                       (make-segment top-right top-left)
+                       (make-segment top-left bottom-left)])))
+
+(def frame-cross-painter
+  (let [[bottom-left top-left bottom-right top-right] unit-square-vectors]
+    (segments-painter [(make-segment bottom-left top-right)
+                       (make-segment top-left bottom-right)])))
+
+(def frame-diamond-painter
+  (let [[bottom-left top-left bottom-right top-right] unit-square-vectors]
+    (segments-painter [(make-segment bottom-left top-right)
+                       (make-segment top-left bottom-right)])))
+

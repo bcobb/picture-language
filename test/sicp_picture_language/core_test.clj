@@ -52,3 +52,26 @@
       (is (= ((frame-coord-map frame) (make-vect 0 0)) (make-vect 5 5))))
     (testing "1,1 maps to the relative unit diagonal"
       (is (= ((frame-coord-map frame) (make-vect 1 1)) (make-vect 7 7))))))
+
+(deftest test-segment-selectors
+  (let [start (make-vect 0 0)
+        end (make-vect 10 10)
+        segment (make-segment start end)]
+    (testing "the start of the segment is the first vector"
+      (is (= (start-segment segment) (make-vect 0 0))))
+    (testing "the end of the segment is the second vector"
+      (is (= (end-segment segment) (make-vect 10 10))))))
+
+(deftest test-segments-painter
+  (let [frame-origin (make-vect 5 5)
+        frame-edge1 (make-vect 0 2)
+        frame-edge2 (make-vect 2 0)
+        frame (make-frame frame-origin frame-edge1 frame-edge2)
+        segment1 (make-segment (make-vect 0 0) (make-vect 1 1))
+        segment2 (make-segment (make-vect 0 1) (make-vect 1 0))]
+    (testing "the unit forward diagonal maps to the frame forward diagonal"
+      (let [painter (segments-painter [segment1])]
+        (is (= (painter frame) (vector (make-segment (make-vect 5 5) (make-vect 7 7)))))))
+    (testing "the unit backwards diagonal maps to the frame backwards diagonal"
+      (let [painter (segments-painter [segment2])]
+        (is (= (painter frame) (vector (make-segment (make-vect 7 5) (make-vect 5 7)))))))))
