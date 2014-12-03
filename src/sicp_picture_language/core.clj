@@ -111,3 +111,55 @@
     (segments-painter [(make-segment bottom-left top-right)
                        (make-segment top-left bottom-right)])))
 
+(defn transform-painter
+  "Transforms the given painter to paint in the given frame"
+  [painter origin corner1 corner2]
+  (fn [frame]
+    (let [m (frame-coord-map frame)
+          new-origin (m origin)]
+      (painter (make-frame new-origin
+                           (sub-vect (m corner1) new-origin)
+                           (sub-vect (m corner2) new-origin))))))
+
+(defn flip-vert
+  "Transforms the given painter to flip images vertically"
+  [painter]
+  (let [[bottom-left top-left _ top-right] unit-square-vectors]
+    (transform-painter painter top-left top-right bottom-left)))
+
+(defn shrink-to-upper-right
+  "Transforms the given painter to paint images shrunk to the first quadrant of
+  the original frame"
+  [painter]
+  (transform-painter painter
+                     (make-vect 0.5 0.5)
+                     (make-vect 1.0 0.5)
+                     (make-vect 0.5 1.0)))
+
+(defn rotate90
+  "Transforms the given painter to paint images rotated 90-degrees
+  counterclockwise"
+  [painter]
+  (let [[bottom-left _ bottom-right top-right] unit-square-vectors]
+    (transform-painter painter bottom-right top-right bottom-left)))
+
+(defn squash-inwards
+  "Transforms the painter to paint in the middle-third of the original frame"
+  [painter]
+  (transform-painter painter
+                     (make-vect 0 0)
+                     (make-vect 0.65 0.35)
+                     (make-vect 0.35 0.65)))
+
+(defn beside
+  "Returns a compound painter which arranges two painters to paint beside each
+  other"
+  [painter1 painter2]
+  (let [split-point (make-vect 0.5 0)
+        [bottom-left top-left bottom-right _] unit-square-vectors
+        paint-left (transform-painter painter1 bottom-left split-point top-left)
+        paint-right (transform-painter painter2 split-point bottom-right (make-vect 0.5 1))]
+    (fn [frame]
+      (paint-left frame)
+      (paint-right frame))))
+
