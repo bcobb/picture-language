@@ -1,0 +1,9 @@
+{"version":3,
+ "file":
+ "/home/vagrant/clojure/sicp-picture-language/resources/public/js/compiled/out/sicp_picture_language/app.js",
+ "sources":["app.cljs"],
+ "lineCount":11,
+ "mappings":";AAAA;;;;;;AAKA,AAACA;AAED,AAACC",
+ "names":
+ ["cljs.core/enable-console-print!",
+  "figwheel.client/watch-and-reload"]}
