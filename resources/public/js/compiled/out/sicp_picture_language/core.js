@@ -83,19 +83,19 @@ sicp_picture_language.core.segments_painter = (function segments_painter(segment
 }),segments);
 });
 });
-sicp_picture_language.core.unit_square_vectors = cljs.core.map.call(null,cljs.core.partial.call(null,cljs.core.apply,sicp_picture_language.core.make_vect),(function (){var iter__12268__auto__ = (function iter__21843(s__21844){return (new cljs.core.LazySeq(null,(function (){var s__21844__$1 = s__21844;while(true){
-var temp__4126__auto__ = cljs.core.seq.call(null,s__21844__$1);if(temp__4126__auto__)
-{var xs__4624__auto__ = temp__4126__auto__;var x = cljs.core.first.call(null,xs__4624__auto__);var iterys__12264__auto__ = ((function (s__21844__$1,x,xs__4624__auto__,temp__4126__auto__){
-return (function iter__21845(s__21846){return (new cljs.core.LazySeq(null,((function (s__21844__$1,x,xs__4624__auto__,temp__4126__auto__){
-return (function (){var s__21846__$1 = s__21846;while(true){
-var temp__4126__auto____$1 = cljs.core.seq.call(null,s__21846__$1);if(temp__4126__auto____$1)
-{var s__21846__$2 = temp__4126__auto____$1;if(cljs.core.chunked_seq_QMARK_.call(null,s__21846__$2))
-{var c__12266__auto__ = cljs.core.chunk_first.call(null,s__21846__$2);var size__12267__auto__ = cljs.core.count.call(null,c__12266__auto__);var b__21848 = cljs.core.chunk_buffer.call(null,size__12267__auto__);if((function (){var i__21847 = (0);while(true){
-if((i__21847 < size__12267__auto__))
-{var y = cljs.core._nth.call(null,c__12266__auto__,i__21847);cljs.core.chunk_append.call(null,b__21848,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null));
+sicp_picture_language.core.unit_square_vectors = cljs.core.map.call(null,cljs.core.partial.call(null,cljs.core.apply,sicp_picture_language.core.make_vect),(function (){var iter__12268__auto__ = (function iter__19082(s__19083){return (new cljs.core.LazySeq(null,(function (){var s__19083__$1 = s__19083;while(true){
+var temp__4126__auto__ = cljs.core.seq.call(null,s__19083__$1);if(temp__4126__auto__)
+{var xs__4624__auto__ = temp__4126__auto__;var x = cljs.core.first.call(null,xs__4624__auto__);var iterys__12264__auto__ = ((function (s__19083__$1,x,xs__4624__auto__,temp__4126__auto__){
+return (function iter__19084(s__19085){return (new cljs.core.LazySeq(null,((function (s__19083__$1,x,xs__4624__auto__,temp__4126__auto__){
+return (function (){var s__19085__$1 = s__19085;while(true){
+var temp__4126__auto____$1 = cljs.core.seq.call(null,s__19085__$1);if(temp__4126__auto____$1)
+{var s__19085__$2 = temp__4126__auto____$1;if(cljs.core.chunked_seq_QMARK_.call(null,s__19085__$2))
+{var c__12266__auto__ = cljs.core.chunk_first.call(null,s__19085__$2);var size__12267__auto__ = cljs.core.count.call(null,c__12266__auto__);var b__19087 = cljs.core.chunk_buffer.call(null,size__12267__auto__);if((function (){var i__19086 = (0);while(true){
+if((i__19086 < size__12267__auto__))
+{var y = cljs.core._nth.call(null,c__12266__auto__,i__19086);cljs.core.chunk_append.call(null,b__19087,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null));
 {
-var G__21849 = (i__21847 + (1));
-i__21847 = G__21849;
+var G__19088 = (i__19086 + (1));
+i__19086 = G__19088;
 continue;
 }
 } else
@@ -104,27 +104,27 @@ continue;
 break;
 }
 })())
-{return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__21848),iter__21845.call(null,cljs.core.chunk_rest.call(null,s__21846__$2)));
+{return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__19087),iter__19084.call(null,cljs.core.chunk_rest.call(null,s__19085__$2)));
 } else
-{return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__21848),null);
+{return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__19087),null);
 }
 } else
-{var y = cljs.core.first.call(null,s__21846__$2);return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null),iter__21845.call(null,cljs.core.rest.call(null,s__21846__$2)));
+{var y = cljs.core.first.call(null,s__19085__$2);return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x,y], null),iter__19084.call(null,cljs.core.rest.call(null,s__19085__$2)));
 }
 } else
 {return null;
 }
 break;
 }
-});})(s__21844__$1,x,xs__4624__auto__,temp__4126__auto__))
+});})(s__19083__$1,x,xs__4624__auto__,temp__4126__auto__))
 ,null,null));
-});})(s__21844__$1,x,xs__4624__auto__,temp__4126__auto__))
+});})(s__19083__$1,x,xs__4624__auto__,temp__4126__auto__))
 ;var fs__12265__auto__ = cljs.core.seq.call(null,iterys__12264__auto__.call(null,cljs.core.range.call(null,(0),(2))));if(fs__12265__auto__)
-{return cljs.core.concat.call(null,fs__12265__auto__,iter__21843.call(null,cljs.core.rest.call(null,s__21844__$1)));
+{return cljs.core.concat.call(null,fs__12265__auto__,iter__19082.call(null,cljs.core.rest.call(null,s__19083__$1)));
 } else
 {{
-var G__21850 = cljs.core.rest.call(null,s__21844__$1);
-s__21844__$1 = G__21850;
+var G__19089 = cljs.core.rest.call(null,s__19083__$1);
+s__19083__$1 = G__19089;
 continue;
 }
 }
@@ -136,11 +136,11 @@ break;
 }),null,null));
 });return iter__12268__auto__.call(null,cljs.core.range.call(null,(0),(2)));
 })());
-sicp_picture_language.core.frame_outline_painter = (function (){var vec__21851 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__21851,(0),null);var top_left = cljs.core.nth.call(null,vec__21851,(1),null);var bottom_right = cljs.core.nth.call(null,vec__21851,(2),null);var top_right = cljs.core.nth.call(null,vec__21851,(3),null);return sicp_picture_language.core.segments_painter.call(null,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [sicp_picture_language.core.make_segment.call(null,bottom_left,bottom_right),sicp_picture_language.core.make_segment.call(null,bottom_right,top_right),sicp_picture_language.core.make_segment.call(null,top_right,top_left),sicp_picture_language.core.make_segment.call(null,top_left,bottom_left)], null));
+sicp_picture_language.core.frame_outline_painter = (function (){var vec__19090 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__19090,(0),null);var top_left = cljs.core.nth.call(null,vec__19090,(1),null);var bottom_right = cljs.core.nth.call(null,vec__19090,(2),null);var top_right = cljs.core.nth.call(null,vec__19090,(3),null);return sicp_picture_language.core.segments_painter.call(null,new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [sicp_picture_language.core.make_segment.call(null,bottom_left,bottom_right),sicp_picture_language.core.make_segment.call(null,bottom_right,top_right),sicp_picture_language.core.make_segment.call(null,top_right,top_left),sicp_picture_language.core.make_segment.call(null,top_left,bottom_left)], null));
 })();
-sicp_picture_language.core.frame_cross_painter = (function (){var vec__21852 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__21852,(0),null);var top_left = cljs.core.nth.call(null,vec__21852,(1),null);var bottom_right = cljs.core.nth.call(null,vec__21852,(2),null);var top_right = cljs.core.nth.call(null,vec__21852,(3),null);return sicp_picture_language.core.segments_painter.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sicp_picture_language.core.make_segment.call(null,bottom_left,top_right),sicp_picture_language.core.make_segment.call(null,top_left,bottom_right)], null));
+sicp_picture_language.core.frame_cross_painter = (function (){var vec__19091 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__19091,(0),null);var top_left = cljs.core.nth.call(null,vec__19091,(1),null);var bottom_right = cljs.core.nth.call(null,vec__19091,(2),null);var top_right = cljs.core.nth.call(null,vec__19091,(3),null);return sicp_picture_language.core.segments_painter.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sicp_picture_language.core.make_segment.call(null,bottom_left,top_right),sicp_picture_language.core.make_segment.call(null,top_left,bottom_right)], null));
 })();
-sicp_picture_language.core.frame_diamond_painter = (function (){var vec__21853 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__21853,(0),null);var top_left = cljs.core.nth.call(null,vec__21853,(1),null);var bottom_right = cljs.core.nth.call(null,vec__21853,(2),null);var top_right = cljs.core.nth.call(null,vec__21853,(3),null);return sicp_picture_language.core.segments_painter.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sicp_picture_language.core.make_segment.call(null,bottom_left,top_right),sicp_picture_language.core.make_segment.call(null,top_left,bottom_right)], null));
+sicp_picture_language.core.frame_diamond_painter = (function (){var vec__19092 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__19092,(0),null);var top_left = cljs.core.nth.call(null,vec__19092,(1),null);var bottom_right = cljs.core.nth.call(null,vec__19092,(2),null);var top_right = cljs.core.nth.call(null,vec__19092,(3),null);return sicp_picture_language.core.segments_painter.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sicp_picture_language.core.make_segment.call(null,bottom_left,top_right),sicp_picture_language.core.make_segment.call(null,top_left,bottom_right)], null));
 })();
 /**
 * Transforms the given painter to paint in the given frame
@@ -151,12 +151,12 @@ sicp_picture_language.core.transform_painter = (function transform_painter(paint
 /**
 * Transforms the given painter to flip images vertically
 */
-sicp_picture_language.core.flip_vert = (function flip_vert(painter){var vec__21855 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__21855,(0),null);var top_left = cljs.core.nth.call(null,vec__21855,(1),null);var _ = cljs.core.nth.call(null,vec__21855,(2),null);var top_right = cljs.core.nth.call(null,vec__21855,(3),null);return sicp_picture_language.core.transform_painter.call(null,painter,top_left,top_right,bottom_left);
+sicp_picture_language.core.flip_vert = (function flip_vert(painter){var vec__19094 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__19094,(0),null);var top_left = cljs.core.nth.call(null,vec__19094,(1),null);var _ = cljs.core.nth.call(null,vec__19094,(2),null);var top_right = cljs.core.nth.call(null,vec__19094,(3),null);return sicp_picture_language.core.transform_painter.call(null,painter,top_left,top_right,bottom_left);
 });
 /**
 * Returns a painter flipped horizontally
 */
-sicp_picture_language.core.flip_horiz = (function flip_horiz(painter){var vec__21857 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__21857,(0),null);var _ = cljs.core.nth.call(null,vec__21857,(1),null);var bottom_right = cljs.core.nth.call(null,vec__21857,(2),null);var top_right = cljs.core.nth.call(null,vec__21857,(3),null);return sicp_picture_language.core.transform_painter.call(null,painter,bottom_right,bottom_left,top_right);
+sicp_picture_language.core.flip_horiz = (function flip_horiz(painter){var vec__19096 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__19096,(0),null);var _ = cljs.core.nth.call(null,vec__19096,(1),null);var bottom_right = cljs.core.nth.call(null,vec__19096,(2),null);var top_right = cljs.core.nth.call(null,vec__19096,(3),null);return sicp_picture_language.core.transform_painter.call(null,painter,bottom_right,bottom_left,top_right);
 });
 /**
 * Transforms the given painter to paint images shrunk to the first quadrant of
@@ -168,7 +168,7 @@ sicp_picture_language.core.shrink_to_upper_right = (function shrink_to_upper_rig
 * Transforms the given painter to paint images rotated 90-degrees
 * counterclockwise
 */
-sicp_picture_language.core.rotate90 = (function rotate90(painter){var vec__21859 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__21859,(0),null);var _ = cljs.core.nth.call(null,vec__21859,(1),null);var bottom_right = cljs.core.nth.call(null,vec__21859,(2),null);var top_right = cljs.core.nth.call(null,vec__21859,(3),null);return sicp_picture_language.core.transform_painter.call(null,painter,bottom_right,top_right,bottom_left);
+sicp_picture_language.core.rotate90 = (function rotate90(painter){var vec__19098 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__19098,(0),null);var _ = cljs.core.nth.call(null,vec__19098,(1),null);var bottom_right = cljs.core.nth.call(null,vec__19098,(2),null);var top_right = cljs.core.nth.call(null,vec__19098,(3),null);return sicp_picture_language.core.transform_painter.call(null,painter,bottom_right,top_right,bottom_left);
 });
 /**
 * Transforms the given painter to paint images rotated 180-degrees
@@ -191,17 +191,22 @@ sicp_picture_language.core.squash_inwards = (function squash_inwards(painter){re
 * Returns a compound painter which arranges two painters to paint beside each
 * other
 */
-sicp_picture_language.core.beside = (function beside(painter1,painter2){var split_point = sicp_picture_language.core.make_vect.call(null,0.5,(0));var vec__21861 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__21861,(0),null);var top_left = cljs.core.nth.call(null,vec__21861,(1),null);var bottom_right = cljs.core.nth.call(null,vec__21861,(2),null);var _ = cljs.core.nth.call(null,vec__21861,(3),null);var paint_left = sicp_picture_language.core.transform_painter.call(null,painter1,bottom_left,split_point,top_left);var paint_right = sicp_picture_language.core.transform_painter.call(null,painter2,split_point,bottom_right,sicp_picture_language.core.make_vect.call(null,0.5,(1)));return ((function (split_point,vec__21861,bottom_left,top_left,bottom_right,_,paint_left,paint_right){
+sicp_picture_language.core.beside = (function beside(painter1,painter2){var split_point = sicp_picture_language.core.make_vect.call(null,0.5,(0));var vec__19100 = sicp_picture_language.core.unit_square_vectors;var bottom_left = cljs.core.nth.call(null,vec__19100,(0),null);var top_left = cljs.core.nth.call(null,vec__19100,(1),null);var bottom_right = cljs.core.nth.call(null,vec__19100,(2),null);var _ = cljs.core.nth.call(null,vec__19100,(3),null);var paint_left = sicp_picture_language.core.transform_painter.call(null,painter1,bottom_left,split_point,top_left);var paint_right = sicp_picture_language.core.transform_painter.call(null,painter2,split_point,bottom_right,sicp_picture_language.core.make_vect.call(null,0.5,(1)));return ((function (split_point,vec__19100,bottom_left,top_left,bottom_right,_,paint_left,paint_right){
 return (function (frame){paint_left.call(null,frame);
 return paint_right.call(null,frame);
 });
-;})(split_point,vec__21861,bottom_left,top_left,bottom_right,_,paint_left,paint_right))
+;})(split_point,vec__19100,bottom_left,top_left,bottom_right,_,paint_left,paint_right))
 });
 /**
 * Returns a compound painter which arranges two painters to paint one above
 * the other
 */
 sicp_picture_language.core.below = (function below(painter1,painter2){return sicp_picture_language.core.rotate90.call(null,sicp_picture_language.core.beside.call(null,painter1,painter2));
+});
+/**
+* Returns a painter which paints in a frame half the size of the current frame
+*/
+sicp_picture_language.core.nestle = (function nestle(painter){return sicp_picture_language.core.transform_painter.call(null,painter,sicp_picture_language.core.make_vect.call(null,0.25,0.25),sicp_picture_language.core.make_vect.call(null,0.25,0.5),sicp_picture_language.core.make_vect.call(null,0.5,0.25));
 });
 
 //# sourceMappingURL=core.js.map

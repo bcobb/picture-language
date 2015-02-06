@@ -187,3 +187,10 @@
   [painter1 painter2]
   (rotate90 (beside painter1 painter2)))
 
+(defn nestle
+  "Returns a painter which paints in a frame half the size of the current frame"
+  [painter]
+  (transform-painter painter
+                     (make-vect 0.25 0.25)
+                     (make-vect 0.25 0.5)
+                     (make-vect 0.5 0.25)))
